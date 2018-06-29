@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './views/mylake.dart';
 import './views/starup_name.dart';
 import './views/myhome.dart';
-import './components/details.dart';
+import './views/component.dart';
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -30,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
 
   @override
   void initState() {
-    controller = new TabController(length: 3, vsync: this);
+    controller = new TabController(length: 4, vsync: this);
   }
 
   @override
@@ -48,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
           new MyLake(),
           new StartUpName(),
           new MyHome(),
+          new MyComponent(),
         ],
       ),
       bottomNavigationBar: new Material(
@@ -58,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
             new Tab(text: 'lake',icon: new Icon(Icons.nature),),
             new Tab(text: 'name',icon: new Icon(Icons.landscape),),
             new Tab(text: 'home',icon: new Icon(Icons.home),),
+            new Tab(text: 'component',icon: new Icon(Icons.cake),),
           ],
         ),
       ),
