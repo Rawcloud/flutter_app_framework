@@ -4,7 +4,6 @@ import '../components/list.dart';
 class MyHome extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return new MyHomeState();
   }
 }

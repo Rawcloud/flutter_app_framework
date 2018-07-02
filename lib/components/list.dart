@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import '../components/details.dart';
+import '../utils/showProgress.dart';
 class MyList extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -36,7 +37,7 @@ class ListState extends State<MyList>{
 
   @override
   Widget build(BuildContext context) {
-    getData() ;
+    new ShowProgress(getData()) ;
     return new ListView.builder(
       itemCount:data == null ? 0 : data.length,
       itemBuilder: (BuildContext context,int index){
